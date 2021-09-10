@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dragons</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link href="CSS/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=MonteCarlo">
+</head>	
+<body>
+	<header>
+		<a href="homepage.html">
+			<img src= images/homepage.jpeg href="homepage.html"></img>
+		</a>
+		<h1>PHOTO GALLERY</h1>
+	</header>
+	<!--nav bar area-->
+	<nav>
+		<ul>
+			<li><a href="homepage.html" class="active">HOME</a></li>
+			<li><a href="variations.html" class="active">VARIATIONS</a></li>
+			<li><a href="characteristics.html">CHARACTERISTICS</a></li>
+			<li><a href="realistic-possibilities.html">REALISTIC POSSIBILITIES</a></li>
+			<li><a href="history.html">HISTORY</a></li>
+			<li><a href="photo_gallery.html">PHOTO GALLERY</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section >
+			<br><br>
+			<div>
+				<img class="mySlides" src="https://i.redd.it/ar2lainljj621.jpg" width="600px" height="auto">
+				<img class="mySlides" src="https://studycli.org/wp-content/uploads/2021/06/chinese-dragons-explained.png" width="600px" height="auto">
+				<img class="mySlides" src="https://longreadsblog.files.wordpress.com/2017/01/friedrich-johann-justin-bertuch_mythical-creature-dragon_1806.jpg" width="600px" height="auto">
+				<img class="mySlides" src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/dragon-img_ver_1.jpg" width="600px" height="auto">
+				<img class="mySlides" src="https://st4.depositphotos.com/9605770/29078/v/600/depositphotos_290788988-stock-illustration-welsh-red-dragon-vector-illustration.jpg" width="600px" height="auto">
+				<img class="mySlides" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2020%2F12%2F03%2FHouse-of-the-Dragon-2.jpeg" width="600px" height="auto">
+			</div>
+			<div class="photo_gallery_buttons">
+			<button onclick="plusDivs(-1)">PREVIOUS</button>
+			<button onclick="plusDivs(1)">NEXT</button>	
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<hr>
+		<i>Created by Matthew Harris</i> <br>
+		EIT
+	</footer>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>
+</html>
